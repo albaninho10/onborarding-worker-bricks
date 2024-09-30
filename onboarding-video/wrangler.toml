@@ -1,0 +1,18 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "onboarding-video"
+main = "src/index.ts"
+compatibility_date = "2024-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[env.dev]
+d1_databases = [
+  { binding = "DB", database_name = "onboarding-video-dev", database_id = "0da764c3-e587-4840-ac5e-66a430415fac" }
+]
+
+[env.prod]
+d1_databases = [
+  { binding = "DB", database_name = "onboarding-video-prod", database_id = "c3c977e9-c498-4256-a95e-26a56cffde9f" }
+]
